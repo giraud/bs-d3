@@ -28,11 +28,14 @@
     "bs-platform": "2.2.3",
     "jest": "^22.0.4",
     "jsdom": "^11.7.0",
-    "webpack": "4.5.0",
-    "webpack-bundle-analyzer": "2.11.1",
-    "webpack-cli": "2.0.14"
+    "webpack": "^4.5.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.14"
   },
   "dependencies": {
     "d3": "5.0.0"
+  },
+  "jest": {
+    "testRegex": "/js/__tests__/.*_test\\.js$"
   }
 }
