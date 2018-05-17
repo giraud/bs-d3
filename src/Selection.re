@@ -6,7 +6,6 @@ type t;
 
 [@bs.module "d3-selection"] external selectRoot : unit => t = "selection";
 [@bs.module "d3-selection"] external select : string => t = "";
-[@bs.module "d3-selection"] external selecto : 'a => t = "select";
 [@bs.module "d3-selection"] external selectNode : Dom.node => t = "";
 [@bs.module "d3-selection"] external selectAll : string => t = "";
 [@bs.module "d3-selection"] external window : Dom.node => Dom.node = "";
@@ -35,6 +34,5 @@ type t;
 
 [@bs.send.pipe : t] external enter : t = "";
 [@bs.send.pipe : t] external exit : t = "";
-[@bs.send.pipe : t] external text : string = "";
 
 [@bs.send.pipe : t] external callAxis : Axis.t => t = "call";
