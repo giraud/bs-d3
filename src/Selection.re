@@ -6,7 +6,8 @@ type t;
 
 [@bs.module "d3-selection"] external selectRoot : unit => t = "selection";
 [@bs.module "d3-selection"] external select : string => t = "";
-[@bs.module "d3-selection"] external selectNode : Dom.node => t = "select";
+[@bs.module "d3-selection"] external selecto : 'a => t = "select";
+[@bs.module "d3-selection"] external selectNode : Dom.node => t = "";
 [@bs.module "d3-selection"] external selectAll : string => t = "";
 [@bs.module "d3-selection"] external window : Dom.node => Dom.node = "";
 
@@ -21,6 +22,7 @@ type t;
 
 [@bs.send.pipe : t] external style : (string, string) => t = "";
 [@bs.send.pipe : t] external styleFn : (string, ('a, int) => string) => t = "style";
+[@bs.send.pipe : t] external text : string => t = "";
 [@bs.send.pipe : t] external textFn : (('a, int) => string) => t = "text";
 [@bs.send.pipe : t] external filter : string => t = ""; /* TODO: filter by fn */
 [@bs.send.pipe : t] external sort : (('a, 'a) => float) => t = "";
